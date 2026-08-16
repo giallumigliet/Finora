@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1f1f1f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <title>CHECK CALENDAR</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1 id="calendar-title">CHECK CALENDAR</h1>
+
+  <div id="calendar-wrapper">
+      <div class="calendar">
+        <div class="calendar-header">
+          <button id="prevMonth" class="month-btn">◀</button>
+          <div id="monthYear"></div>
+          <button id="nextMonth" class="month-btn">▶</button>
+        </div>
+
+        <div class="weekdays">
+          <div>Mon</div>
+          <div>Tue</div>
+          <div>Wed</div>
+          <div>Thu</div>
+          <div>Fri</div>
+          <div>Sat</div>
+          <div>Sun</div>
+        </div>
+
+        <div class="days" id="calendarDays"></div>
+    </div>
+
+
+    <div class="progress-wrapper hidden-day-buttons" id="progressWrapper">
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+      <div class="progress-text" id="progressText">0</div>
+    </div>
+
+  </div>
+  
+
+
+
+  <div id="day-actions" class="hidden-day-buttons">
+    <button id="add-btn">+</button>
+    <button id="cancel-btn">×</button>
+  </div>
+
+  <div id="message"></div>
+
+
+  <div id="button-footer">
+    <button id="task-btn">TASKS</button>
+    <div id="auth-area">
+      <neutral-button id="login-btn">LOG IN</neutral-button>
+      <button id="profile-btn" class="hidden-task-buttons">
+        <img id="user-photo" />
+      </button>
+    </div>
+    <button id="stats-btn">STATS</button>
+  </div>
+
+
+
+
+  <div id="overlay"></div>
+
+  <div id="account-floating-panel"  class="hidden-task-buttons">
+    <account-button id="lightDark-btn">Light/Dark mode</account-button>
+    <account-button id="changeAccount-btn">Change account</account-button>
+    <account-button id="logout-btn">Logout</account-button>
+    <account-button id="resetData-btn">Reset data</account-button>
+  </div>
+
+
+
+
+  <div id="floating-panel">
+    <div class="panel-header" id="close-panel">CLOSE</div>
+
+    <div class="panel-content">
+      <div id="task-list"></div>
+    </div>
+
+
+    <div class="panel-footer">
+      <div id="task-manager" class="task-actions">
+        <neutral-button id="addTask-btn">+</neutral-button>
+      </div>
+
+      <div id="task-form" class="hidden-task-buttons">
+        <div class="task-top-row">
+          <input type="text" id="task-name" placeholder="Task name">
+          <div id="hue-preview"></div>
+        </div>
+
+        <div id="hue-container" class="hidden-task-buttons">
+          <input type="range" id="task-hue" min="0" max="360" value="162">
+        </div>
+        <div id="task-editor">
+          <neutral-button id="goback-task">X</neutral-button>
+          <neutral-button id="edit-task" class="hidden-task-buttons">CONFIRM</neutral-button>
+          <neutral-button id="save-task">CREATE</neutral-button>
+        </div>
+      </div>
+    </div>
+    
+    
+  </div>
+
+
+
+  <div id="stats-floating-panel">
+    <div id="close-stats-panel" class="panel-header">CLOSE</div>
+    <div id="stats-panel-content" class="panel-content">
+      
+      <div id="time-bar-chart" class="bar-chart"></div>
+      <div id="time-trend-chart" class="trend-chart"></div>
+
+    </div>
+  </div>
+
+
+  <div id="notifications-floating-panel">
+    <div id="notifications-panel-content">
+      <div>SET A REMINDER?</div>
+      <input type="time" id="reminderTime">
+
+      <div id="reminderDays">
+        <div id="monday-flag" class="flag">L</div>
+        <div id="tuesday-flag" class="flag">M</div>
+        <div id="wednesday-flag" class="flag">M</div>
+        <div id="thursday-flag" class="flag">G</div>
+        <div id="friday-flag" class="flag">V</div>
+        <div id="saturday-flag" class="flag">S</div>
+        <div id="sunday-flag" class="flag">D</div>
+      </div>
+    
+    </div>
+
+    <div id="notifications-panel-footer" class="panel-footer">
+      <neutral-button id="confirm-notification">CONFIRM</neutral-button>
+    </div>
+  </div>
+
+
+  <script type="module" src="script.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
