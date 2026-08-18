@@ -27,7 +27,7 @@
 
 
   html {
-      background: var(--bg-color);
+      background: var(--bg-main);
   }
 
   body {
