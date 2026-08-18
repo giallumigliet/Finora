@@ -1,11 +1,23 @@
 // script.js
 import { auth, db } from "./firebase.js";
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-app.js";
 import {
   GoogleAuthProvider, signInWithPopup, setPersistence,
   browserLocalPersistence, onAuthStateChanged, signOut, deleteUser 
-} from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
-import { getDocs, deleteDoc, doc, collection, onSnapshot } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+} from "https://www.gstatic.com/firebasejs/12.17.1/firebase-auth.js";
+import { getDocs, deleteDoc, doc, collection, onSnapshot } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.js";
+
+
+
+
+const loginBtn = document.getElementById("login-btn");
+const logoutBtn = document.getElementById("logout-btn");
+const resetDataBtn = document.getElementById("resetData-btn");
+
+const profileBtn = document.getElementById("profile-btn");
+const userPhoto = document.getElementById("user-photo");
+const accountPanel = document.getElementById("account-floating-panel");
+const changeAccountBtn = document.getElementById("changeAccount-btn");
 
 
 
