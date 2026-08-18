@@ -79,7 +79,7 @@ resetDataBtn.addEventListener("click", async () => {
     await deleteUser(auth.currentUser);
 
     // reset UI
-    accountPanel.classList.add("hidden-task-buttons");
+    accountPanel.classList.add("hidden");
     document.body.classList.remove("color-mode");
 
   } catch (err) {
@@ -108,8 +108,8 @@ onAuthStateChanged(auth, async user => {
     
   } else {
     console.log("user NOT logged!!");
-    loginBtn.classList.remove("hidden-task-buttons");
-    profileBtn.classList.add("hidden-task-buttons");
+    loginBtn.classList.remove("hidden");
+    profileBtn.classList.add("hidden");
     
   }
 });
