@@ -1,4 +1,7 @@
 # 💰 Finora Web App
+<p align="center">
+  <img width="150" height="150" alt="check_calendar" src="finora.png" />
+</p>
 La web app di FINanza che ti fa sapere quanto hai speso o guadagnato fino ad ORA. Importa i tuoi cedolini e estratti conti del mese e prendi una visione a 360 gradi di come guadagni e spendi.
 
 Frontend: *HTML* / *CSS* / *JS*.  
